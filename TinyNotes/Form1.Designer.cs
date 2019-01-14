@@ -1,6 +1,6 @@
 ﻿namespace TinyNotes
 {
-    partial class Form1
+    partial class FormWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             this.menuCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPaste = new System.Windows.Forms.ToolStripMenuItem();
             this.openDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveDialog = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,6 +99,7 @@
             this.menuSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.menuSave.Size = new System.Drawing.Size(172, 22);
             this.menuSave.Text = "Save";
+            this.menuSave.Click += new System.EventHandler(this.menuSave_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -128,7 +130,7 @@
             // 
             this.menuUndo.Name = "menuUndo";
             this.menuUndo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.menuUndo.Size = new System.Drawing.Size(152, 22);
+            this.menuUndo.Size = new System.Drawing.Size(144, 22);
             this.menuUndo.Text = "Undo";
             this.menuUndo.Click += new System.EventHandler(this.menuUndo_Click);
             // 
@@ -136,7 +138,7 @@
             // 
             this.menuCut.Name = "menuCut";
             this.menuCut.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.menuCut.Size = new System.Drawing.Size(152, 22);
+            this.menuCut.Size = new System.Drawing.Size(144, 22);
             this.menuCut.Text = "Cut";
             this.menuCut.Click += new System.EventHandler(this.menuCut_Click);
             // 
@@ -144,7 +146,7 @@
             // 
             this.menuCopy.Name = "menuCopy";
             this.menuCopy.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.menuCopy.Size = new System.Drawing.Size(152, 22);
+            this.menuCopy.Size = new System.Drawing.Size(144, 22);
             this.menuCopy.Text = "Copy";
             this.menuCopy.Click += new System.EventHandler(this.menuCopy_Click);
             // 
@@ -152,7 +154,7 @@
             // 
             this.menuPaste.Name = "menuPaste";
             this.menuPaste.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.menuPaste.Size = new System.Drawing.Size(152, 22);
+            this.menuPaste.Size = new System.Drawing.Size(144, 22);
             this.menuPaste.Text = "Paste";
             this.menuPaste.Click += new System.EventHandler(this.menuPaste_Click);
             // 
@@ -160,15 +162,16 @@
             // 
             this.openDialog.FileName = "File Name";
             // 
-            // Form1
+            // FormWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 452);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Form1";
+            this.Name = "FormWindow";
             this.Text = "Tiny Notes";
+            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -191,6 +194,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuCopy;
         private System.Windows.Forms.ToolStripMenuItem menuPaste;
         private System.Windows.Forms.OpenFileDialog openDialog;
+        private System.Windows.Forms.SaveFileDialog saveDialog;
     }
 }
 

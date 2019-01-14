@@ -1,4 +1,18 @@
-﻿using System;
+﻿/*****************************
+ * Programmer:      Nick Marine
+ * Program:         Tiny Notes
+ * Version:         0.1
+ * Date:            1/14/2019
+ * 
+ * Description:
+ * Another wheel in my series of reinventions known as the Tiny Utility Suite. This time
+ * I decided to create a small notepad that could possibly support text formatting like a word
+ * processor. 
+ * 
+ **********************/
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +24,9 @@ using System.Windows.Forms;
 
 namespace TinyNotes
 {
-    public partial class Form1 : Form
+    public partial class FormWindow : Form
     {
-        public Form1()
+        public FormWindow()
         {
             InitializeComponent();
         }
@@ -67,6 +81,31 @@ namespace TinyNotes
             file = openDialog.FileName;
             richTextBox1.LoadFile(file, RichTextBoxStreamType.PlainText);
             
+        }
+
+        private void menuSave_Click(object sender, EventArgs e)
+        {
+            string file = "";
+
+            saveDialog.InitialDirectory = "C:";
+            saveDialog.Title = "Saving Text File";
+            saveDialog.FileName = "";
+
+            saveDialog.Filter = "Text File|*.txt|All Files|*.*";
+
+            if(saveDialog.ShowDialog() != DialogResult.Cancel)
+            {
+                file = saveDialog.FileName;
+                richTextBox1.SaveFile(file, RichTextBoxStreamType.PlainText);
+            }
+        }
+
+        //resize the window based on the main window size
+        //always maintains the same ratio
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            richTextBox1.Height = Height - 78;
+            richTextBox1.Width = Width - 40;
         }
     }
 }

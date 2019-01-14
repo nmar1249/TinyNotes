@@ -2,8 +2,8 @@ E:\Documents\GitHub\TinyNotes\TinyNotes\bin\Debug\TinyNotes.exe.config
 E:\Documents\GitHub\TinyNotes\TinyNotes\bin\Debug\TinyNotes.exe
 E:\Documents\GitHub\TinyNotes\TinyNotes\bin\Debug\TinyNotes.pdb
 E:\Documents\GitHub\TinyNotes\TinyNotes\obj\Debug\TinyNotes.csprojResolveAssemblyReference.cache
-E:\Documents\GitHub\TinyNotes\TinyNotes\obj\Debug\TinyNotes.Form1.resources
 E:\Documents\GitHub\TinyNotes\TinyNotes\obj\Debug\TinyNotes.Properties.Resources.resources
 E:\Documents\GitHub\TinyNotes\TinyNotes\obj\Debug\TinyNotes.csproj.GenerateResource.Cache
 E:\Documents\GitHub\TinyNotes\TinyNotes\obj\Debug\TinyNotes.exe
 E:\Documents\GitHub\TinyNotes\TinyNotes\obj\Debug\TinyNotes.pdb
+E:\Documents\GitHub\TinyNotes\TinyNotes\obj\Debug\TinyNotes.FormWindow.resources
