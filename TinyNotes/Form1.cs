@@ -1,8 +1,13 @@
 ﻿/*****************************
  * Programmer:      Nick Marine
  * Program:         Tiny Notes
- * Version:         0.1
+ * Version:         0.2
  * Date:            1/14/2019
+ * 
+ * 0.2 Changes:
+ * - Added the ability to change the foreground and background colors
+ * - Added the ability to change the notepad font.
+ * - Added an About window which gives a little bit of background into the program
  * 
  * Description:
  * Another wheel in my series of reinventions known as the Tiny Utility Suite. This time
@@ -106,6 +111,59 @@ namespace TinyNotes
         {
             richTextBox1.Height = Height - 78;
             richTextBox1.Width = Width - 40;
+        }
+
+        //allows user to change the color of the foreground text and
+        //background
+        private void bgColor_Click(object sender, EventArgs e)
+        {
+            color(false);
+        }
+
+        private void fgColor_Click(object sender, EventArgs e)
+        {
+            color(true);
+        }
+
+        //sets color for variable specified by the boolean
+        //true = foreground : false = background
+        private void color(bool foreground)
+        {
+            ColorDialog cd = new ColorDialog();
+            cd.AllowFullOpen = true;               //allow custom colors
+            cd.ShowHelp = true;
+
+            if(foreground == true)
+            {
+                cd.Color = richTextBox1.ForeColor;
+
+                if (cd.ShowDialog() == DialogResult.OK)
+                    richTextBox1.ForeColor = cd.Color;
+            }
+            else
+            {
+                cd.Color = richTextBox1.BackColor;
+
+                if(cd.ShowDialog() == DialogResult.OK)
+                    richTextBox1.BackColor = cd.Color;
+            }
+            
+        }
+
+        private void fontMenu_Click(object sender, EventArgs e)
+        {
+            fontDialog.ShowColor = false;           //color is handled by a diff menu
+
+            fontDialog.Font = richTextBox1.Font;
+
+            if (fontDialog.ShowDialog() != DialogResult.Cancel)
+                richTextBox1.Font = fontDialog.Font;
+        }
+
+        private void aboutWindow_Click(object sender, EventArgs e)
+        {
+            about ab = new TinyNotes.about();
+            ab.Show();
         }
     }
 }

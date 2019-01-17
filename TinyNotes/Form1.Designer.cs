@@ -41,8 +41,16 @@
             this.menuCut = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPaste = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bgColor = new System.Windows.Forms.ToolStripMenuItem();
+            this.fgColor = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.openDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveDialog = new System.Windows.Forms.SaveFileDialog();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
+            this.fontDialog = new System.Windows.Forms.FontDialog();
+            this.aboutWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +66,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.editToolStripMenuItem});
+            this.editToolStripMenuItem,
+            this.toolsToolStripMenuItem,
+            this.aboutWindow});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(379, 24);
@@ -158,9 +168,55 @@
             this.menuPaste.Text = "Paste";
             this.menuPaste.Click += new System.EventHandler(this.menuPaste_Click);
             // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.colorToolStripMenuItem,
+            this.fontMenu});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // colorToolStripMenuItem
+            // 
+            this.colorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bgColor,
+            this.fgColor});
+            this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.colorToolStripMenuItem.Text = "Color";
+            // 
+            // bgColor
+            // 
+            this.bgColor.Name = "bgColor";
+            this.bgColor.Size = new System.Drawing.Size(152, 22);
+            this.bgColor.Text = "Background";
+            this.bgColor.Click += new System.EventHandler(this.bgColor_Click);
+            // 
+            // fgColor
+            // 
+            this.fgColor.Name = "fgColor";
+            this.fgColor.Size = new System.Drawing.Size(152, 22);
+            this.fgColor.Text = "Foreground";
+            this.fgColor.Click += new System.EventHandler(this.fgColor_Click);
+            // 
+            // fontMenu
+            // 
+            this.fontMenu.Name = "fontMenu";
+            this.fontMenu.Size = new System.Drawing.Size(152, 22);
+            this.fontMenu.Text = "Font";
+            this.fontMenu.Click += new System.EventHandler(this.fontMenu_Click);
+            // 
             // openDialog
             // 
             this.openDialog.FileName = "File Name";
+            // 
+            // aboutWindow
+            // 
+            this.aboutWindow.Name = "aboutWindow";
+            this.aboutWindow.Size = new System.Drawing.Size(52, 20);
+            this.aboutWindow.Text = "About";
+            this.aboutWindow.Click += new System.EventHandler(this.aboutWindow_Click);
             // 
             // FormWindow
             // 
@@ -195,6 +251,14 @@
         private System.Windows.Forms.ToolStripMenuItem menuPaste;
         private System.Windows.Forms.OpenFileDialog openDialog;
         private System.Windows.Forms.SaveFileDialog saveDialog;
+        private System.Windows.Forms.ColorDialog colorDialog;
+        private System.Windows.Forms.FontDialog fontDialog;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bgColor;
+        private System.Windows.Forms.ToolStripMenuItem fgColor;
+        private System.Windows.Forms.ToolStripMenuItem fontMenu;
+        private System.Windows.Forms.ToolStripMenuItem aboutWindow;
     }
 }
 

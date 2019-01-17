@@ -7,3 +7,4 @@ E:\Documents\GitHub\TinyNotes\TinyNotes\obj\Debug\TinyNotes.csproj.GenerateResou
 E:\Documents\GitHub\TinyNotes\TinyNotes\obj\Debug\TinyNotes.exe
 E:\Documents\GitHub\TinyNotes\TinyNotes\obj\Debug\TinyNotes.pdb
 E:\Documents\GitHub\TinyNotes\TinyNotes\obj\Debug\TinyNotes.FormWindow.resources
+E:\Documents\GitHub\TinyNotes\TinyNotes\obj\Debug\TinyNotes.about.resources
